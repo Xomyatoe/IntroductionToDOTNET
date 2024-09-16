@@ -1,6 +1,6 @@
 ﻿//#define ARRAYS_1
-#define ARRAYS_2
-//#define JAGGED_ARRAYS 
+//#define ARRAYS_2
+#define JAGGED_ARRAYS 
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -88,10 +88,26 @@ namespace Arrays
             {
                 for (int j = 0; j < j_arr[i].Length; j++)
                 {
-                    Console.WriteLine(j_arr[i][j]+"\t")
+                    Console.WriteLine(j_arr[i][j] + "\t");
                 }
                 Console.WriteLine();
             }
+            //Console.WriteLine($"Сумма элементов массива: {j_arr.Cast<int>().Sum()}");
+            int sum = 0;
+            int count = 0;
+            int min, max;
+            min = max = j_arr[0][0];
+            for(int i=0; i<j_arr.Length; i++)
+            {
+                sum += j_arr[i].Sum();
+                count += j_arr[i].Length;
+                if (j_arr[i].Min() < min) min = j_arr[i].Min();
+                if (j_arr[i].Max() > max) max = j_arr[i].Max();
+            }
+            Console.WriteLine($"Сумма элементов массива: {sum} ") ;
+            Console.WriteLine($"Среднее-арифметическое элементов массива: {(double)sum/count} ") ;
+            Console.WriteLine($"Минимальное значение элементов массива: {min} ") ;
+            Console.WriteLine($"Максимальное значение элементов массива: {max} ") ;
 #endif
         }
     }
