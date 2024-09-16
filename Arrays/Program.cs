@@ -1,5 +1,5 @@
-﻿#define ARRAYS_1
-//#define ARRAYS_2
+﻿//#define ARRAYS_1
+#define ARRAYS_2
 //#define JAGGED_ARRAYS 
 using System;
 using System.Collections.Generic;
@@ -53,9 +53,28 @@ namespace Arrays
                 {21,34,55,89 },
                 {144,233,377,610}
             };
-            Console.WriteLine((new int[5]).Rank);
-            Console.WriteLine(i_arr_2.Rank);
-            Console.WriteLine((new int[2,3,4,5]).Rank);
+            Console.WriteLine($"Количество измерений массива: {i_arr_2.Rank}");
+            Console.WriteLine($"Количество элементов в нулевом измерении (количество строк): {i_arr_2.GetLength(0)}");
+            Console.WriteLine($"Количество элементов в первом измерении (количество столбцов): {i_arr_2.GetLength(1)}");
+           for ( int i = 0; i < i_arr_2.GetLength(0); i++ ) 
+            {
+                for ( int j = 0; j < i_arr_2.GetLength(1); j++)
+                {
+                    Console.Write(i_arr_2[i,j] +"\t");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+
+            Console.WriteLine($"Сумма элементов массива: {i_arr_2.Cast<int>().Sum()}");
+            Console.WriteLine($"Среднее-арифметическое элементов массива: {i_arr_2.Cast<int>().Average()}");
+            Console.WriteLine($"минимальное значение элементов массива: {i_arr_2.Cast<int>().Min()}");
+            Console.WriteLine($"максимальное элементов массива: {i_arr_2.Cast<int>().Max()}");
+           /*foreach ( int i in i_arr_2) 
+            {
+                Console.Write(i+"\t");
+            }
+           Console.WriteLine();*/
 #endif
 #if JAGGED_ARRAYS
             int[][] j_arr = new int[][]
