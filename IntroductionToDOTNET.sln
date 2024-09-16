@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gepmetry", "Gepmetry\Gepmet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factorial", "Factorial\Factorial.csproj", "{3A16E088-7E2E-4895-A57A-4A30D1DF3035}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game", "Game\Game.csproj", "{645A8061-D1BA-46F8-B68A-1E1107216FB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{3A16E088-7E2E-4895-A57A-4A30D1DF3035}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A16E088-7E2E-4895-A57A-4A30D1DF3035}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A16E088-7E2E-4895-A57A-4A30D1DF3035}.Release|Any CPU.Build.0 = Release|Any CPU
+		{645A8061-D1BA-46F8-B68A-1E1107216FB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{645A8061-D1BA-46F8-B68A-1E1107216FB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{645A8061-D1BA-46F8-B68A-1E1107216FB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{645A8061-D1BA-46F8-B68A-1E1107216FB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
